@@ -9,7 +9,7 @@ Built with plain HTML, PHP, CSS and JavaScript. No frameworks, no build step and
 ## Features
 
 - **Unlimited colours.** The tool starts with one random colour, and you can add as many as you like.
-- **HEX by default, with an RGB/HSL picker.** Type a HEX value (3 or 6 digits) or click the swatch to open a picker with HEX, RGB and HSL tabs. The picker also has the system colour picker and, in Chrome and Edge, *Pick from screen*.
+- **HEX by default, with an RGB/HSL picker.** Type a HEX value (3 or 6 digits) or click the swatch to open a picker with HEX, RGB and HSL tabs. The picker also has the system colour picker.
 - **Automatic colour names.** Each colour gets the name of its nearest named colour (e.g. `#F2E2BA` becomes *Soft Butter*). Type over the name to use your own. The reset button brings the automatic name back.
 - **WCAG 2.2 AA (default) or AAA.**
 - **Three checks per pair:**
@@ -73,7 +73,7 @@ The service worker (offline support and *Install app*) only runs over **HTTPS** 
 
 ```php
 <!-- In the <head> -->
-<link rel="stylesheet" href="/tools/colour-palette-contrast-checker/assets/css/cpc.css?v=1.0.4">
+<link rel="stylesheet" href="/tools/colour-palette-contrast-checker/assets/css/cpc.css?v=1.0.5">
 
 <!-- Where the tool should appear -->
 <?php
@@ -82,7 +82,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/tools/colour-palette-contrast-checker/part
 ?>
 
 <!-- Before </body> -->
-<script src="/tools/colour-palette-contrast-checker/assets/js/cpc.js?v=1.0.4" defer></script>
+<script src="/tools/colour-palette-contrast-checker/assets/js/cpc.js?v=1.0.5" defer></script>
 ```
 
 When embedded:
@@ -127,7 +127,7 @@ Colour names are matched by the smallest distance in the OKLab colour space, whi
 
 ## Browser support
 
-All current versions of Chrome, Edge, Firefox and Safari, on desktop and mobile. *Pick from screen* (the EyeDropper API) only appears in Chromium-based browsers.
+All current versions of Chrome, Edge, Firefox and Safari, on desktop and mobile.
 
 ## Credits
 

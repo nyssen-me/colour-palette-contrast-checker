@@ -683,8 +683,6 @@
 
     var pickerHex = q('[data-cpc-picker-hex]', pickerEl);
     var pickerNative = q('[data-cpc-picker-native]', pickerEl);
-    var eyedropperBtn = q('[data-cpc-eyedropper]', pickerEl);
-    if ('EyeDropper' in window) eyedropperBtn.hidden = false;
 
     function openPicker(id, trigger) {
         if (picker.colourId === id) { closePicker(true); return; }
@@ -841,12 +839,7 @@
     pickerEl.addEventListener('click', function (e) {
         var tab = e.target.closest('[data-cpc-tab]');
         if (tab) { selectTab(tab.getAttribute('data-cpc-tab'), true); return; }
-        if (e.target.closest('[data-cpc-picker-close], [data-cpc-picker-done]')) { closePicker(true); return; }
-        if (e.target.closest('[data-cpc-eyedropper]')) {
-            new window.EyeDropper().open().then(function (result) {
-                setPickerFromHex(normaliseHex(result.sRGBHex));
-            }).catch(function () { /* cancelled */ });
-        }
+        if (e.target.closest('[data-cpc-picker-close], [data-cpc-picker-done]')) closePicker(true);
     });
 
     pickerEl.addEventListener('keydown', function (e) {

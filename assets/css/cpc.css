@@ -174,8 +174,8 @@
     display: flex;
     align-items: center;
     gap: 12px;
-    font-size: 1.125rem;
-    font-weight: 800;
+    font-size: 1.2rem;
+    font-weight: 700;
     letter-spacing: -0.01em;
     line-height: 1.2;
 }
@@ -185,7 +185,7 @@
 
 /* ---------- Intro ---------- */
 .cpc-intro {
-    padding-block: 24px 32px;
+    padding-block: 24px 64px;
 }
 
 .cpc-intro__lead {
@@ -394,7 +394,9 @@
 /* ---------- Section heads ---------- */
 .cpc-palette,
 .cpc-results,
-.cpc-info { padding-block: 40px 8px; }
+.cpc-info {
+    padding-block: 80px 8px;
+}
 
 .cpc-section-head {
     display: flex;
@@ -782,7 +784,13 @@
     padding: 16px 18px;
 }
 
-.cpc-card__title { font-size: 1.25rem; font-weight: 800; letter-spacing: -0.01em; line-height: 1.2; }
+.cpc-card__title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+}
+
 .cpc-card__meta { display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 0.875rem; }
 .cpc-card__meta code { font-family: var(--cpc-mono); font-weight: 700; }
 

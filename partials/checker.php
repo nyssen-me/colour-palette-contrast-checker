@@ -220,10 +220,6 @@ if (!function_exists('cpc_e')) {
                     <input type="color" data-cpc-picker-native>
                     System picker
                 </label>
-                <button type="button" class="cpc-btn cpc-btn--small" data-cpc-eyedropper hidden>
-                    <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="m12 4 4 4M13.5 2.5a2.1 2.1 0 0 1 3 3L14 8l-2-2zM12 6 4.5 13.5 3 17l3.5-1.5L14 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
-                    Pick from screen
-                </button>
             </div>
         </div>
 
