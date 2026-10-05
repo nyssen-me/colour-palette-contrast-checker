@@ -188,7 +188,7 @@ if (!function_exists('cpc_e')) {
 
     <footer class="cpc-footer">
         <div class="cpc-container">
-            <p>Colour names from <a href="https://github.com/meodai/color-name-list" rel="noopener">color-name-list</a> by David Aerne (MIT licence). Contrast calculated with the WCAG 2.2 relative luminance formula.</p>
+            <p>Colour names from <a href="https://github.com/meodai/color-names" rel="noopener">color-name-list</a> by David Aerne (MIT licence). Contrast calculated with the WCAG 2.2 relative luminance formula.</p>
         </div>
     </footer>
 
