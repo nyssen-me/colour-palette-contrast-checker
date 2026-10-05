@@ -38,7 +38,7 @@ Built with plain HTML, PHP, CSS and JavaScript. No frameworks, no build step and
   ```
 
 - **Light and dark themes.** It follows the system setting by default, and the choice is remembered in the browser.
-- **Installable and works offline** (standalone page only), via a web app manifest and a service worker.
+- **Installable and works offline**, via a web app manifest and a service worker.
 - **Accessible.** It's fully keyboard operable, and screen readers hear changes announced. Results never rely on colour alone: each one has a ✓/✗ icon and the word *Pass* or *Fail*.
 
 ## Files
@@ -46,7 +46,7 @@ Built with plain HTML, PHP, CSS and JavaScript. No frameworks, no build step and
 ```
 colour-palette-contrast-checker/
 ├── index.php                    Standalone page
-├── partials/checker.php         The tool's markup (include this to embed it)
+├── partials/checker.php         The tool's markup
 ├── assets/css/cpc.css           All styles, scoped under .cpc
 ├── assets/js/cpc.js             All logic, no dependencies
 ├── assets/data/colour-names.json  ~5,000 colour names (loaded in the background)
@@ -56,7 +56,7 @@ colour-palette-contrast-checker/
 └── README.md
 ```
 
-## Using it as a standalone page
+## Installation
 
 Upload the folder to any server with PHP (any version from 5.4) and open it in a browser:
 
@@ -65,34 +65,6 @@ https://example.com/colour-palette-contrast-checker/
 ```
 
 The service worker (offline support and *Install app*) only runs over **HTTPS** or on `localhost`.
-
-## Embedding it in another page of your site
-
-1. Upload the folder, for example to `/tools/colour-palette-contrast-checker/`.
-2. In the page where you want the tool:
-
-```php
-<!-- In the <head> -->
-<link rel="stylesheet" href="/tools/colour-palette-contrast-checker/assets/css/cpc.css?v=1.0.8">
-
-<!-- Where the tool should appear -->
-<?php
-$cpc_base = '/tools/colour-palette-contrast-checker/'; // URL of the tool folder, with a trailing slash
-include $_SERVER['DOCUMENT_ROOT'] . '/tools/colour-palette-contrast-checker/partials/checker.php';
-?>
-
-<!-- Before </body> -->
-<script src="/tools/colour-palette-contrast-checker/assets/js/cpc.js?v=1.0.8" defer></script>
-```
-
-When embedded:
-
-- The tool's title is an `<h2>` (and its section headings `<h3>`), so it fits under your page's own `<h1>`.
-- All CSS is scoped under the `.cpc` class, so it won't affect the rest of your site, and the theme switch only changes the tool.
-- The service worker isn't registered. Offline support belongs to the standalone page.
-- Use one instance of the tool per page.
-
-To change the tool's colours or fonts, override the custom properties on `.cpc` (e.g. `--cpc-accent`, `--cpc-font`). They're listed at the top of `cpc.css`.
 
 ## URL parameters
 
@@ -110,7 +82,7 @@ The address updates as you work, so any URL is a shareable snapshot. Other query
 
 Browsers and the service worker cache the CSS and JavaScript. After changing them, bump the version number in **both** places so everyone gets the new files:
 
-- `$cpc_version` in `index.php` (and the `?v=` in your embed code)
+- `$cpc_version` in `index.php`
 - `CACHE_VERSION` in `sw.js`
 
 ## How contrast is calculated
@@ -128,6 +100,10 @@ Colour names are matched by the smallest distance in the OKLab colour space, whi
 ## Browser support
 
 All current versions of Chrome, Edge, Firefox and Safari, on desktop and mobile.
+
+## To do
+
+- **Embedding in another page.** Let the tool be included inside an existing page of a website (not only used as a standalone page). An early attempt didn't work well, so this needs more work before it's supported.
 
 ## Credits
 

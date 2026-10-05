@@ -1,8 +1,6 @@
 <?php
 /**
  * Colour Palette Contrast Checker – standalone page.
- *
- * To embed the tool in another page of your site instead, see README.md.
  */
 
 // Bump this when you change the CSS/JS so browsers (and the service worker) fetch the new files.

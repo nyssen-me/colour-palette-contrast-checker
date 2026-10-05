@@ -2,8 +2,7 @@
 /**
  * Colour Palette Contrast Checker – tool markup.
  *
- * Include this file wherever you want the tool to appear, and load
- * assets/css/cpc.css and assets/js/cpc.js on the same page.
+ * Included by index.php, which also loads assets/css/cpc.css and assets/js/cpc.js.
  *
  * Optional variables you can set before including it:
  *   $cpc_base        URL (relative or absolute) of the tool folder, with a trailing slash.
@@ -15,7 +14,7 @@
 $cpc_base       = isset($cpc_base) ? $cpc_base : '';
 $cpc_standalone = !empty($cpc_standalone);
 
-// Heading levels: h1 on the standalone page, h2 when embedded in another page.
+// Heading levels: h1 on the standalone page, h2 otherwise.
 $cpc_h1 = $cpc_standalone ? 1 : 2;
 $cpc_h2 = $cpc_h1 + 1;
 $cpc_h3 = $cpc_h2 + 1;
