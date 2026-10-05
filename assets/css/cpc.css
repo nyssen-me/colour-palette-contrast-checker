@@ -906,10 +906,14 @@
 
 /* ---------- Footer ---------- */
 .cpc-footer {
-    padding-block: 24px;
+    padding-block: 36px;
     border-top: 1px solid var(--cpc-border);
-    font-size: 0.875rem;
+    font-size: 1rem;
     color: var(--cpc-muted);
+}
+
+.cpc-footer p + p {
+    margin-top: 18px;
 }
 
 /* ---------- Colour picker ---------- */

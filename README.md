@@ -73,7 +73,7 @@ The service worker (offline support and *Install app*) only runs over **HTTPS** 
 
 ```php
 <!-- In the <head> -->
-<link rel="stylesheet" href="/tools/colour-palette-contrast-checker/assets/css/cpc.css?v=1.0.5">
+<link rel="stylesheet" href="/tools/colour-palette-contrast-checker/assets/css/cpc.css?v=1.0.6">
 
 <!-- Where the tool should appear -->
 <?php
@@ -82,7 +82,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/tools/colour-palette-contrast-checker/part
 ?>
 
 <!-- Before </body> -->
-<script src="/tools/colour-palette-contrast-checker/assets/js/cpc.js?v=1.0.5" defer></script>
+<script src="/tools/colour-palette-contrast-checker/assets/js/cpc.js?v=1.0.6" defer></script>
 ```
 
 When embedded:

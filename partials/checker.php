@@ -189,6 +189,7 @@ if (!function_exists('cpc_e')) {
     <footer class="cpc-footer">
         <div class="cpc-container">
             <p>Colour names from <a href="https://github.com/meodai/color-names" rel="noopener">color-name-list</a> by David Aerne (MIT licence). Contrast calculated with the WCAG 2.2 relative luminance formula.</p>
+            <p>Made by <a href="https://nyssen.me" rel="noopener">Nyssen</a> · <a href="https://github.com/nyssen-me/colour-palette-contrast-checker" rel="noopener">Source code on GitHub</a></p>
         </div>
     </footer>
 
