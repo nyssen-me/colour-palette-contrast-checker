@@ -52,7 +52,7 @@ colour-palette-contrast-checker/
 ├── assets/data/colour-names.json  ~5,000 colour names (loaded in the background)
 ├── manifest.webmanifest         Web app manifest
 ├── sw.js                        Service worker (offline support)
-├── icons/                       App icons (SVG + PNG)
+├── assets/icons/                App icons (SVG + PNG)
 └── README.md
 ```
 
@@ -73,7 +73,7 @@ The service worker (offline support and *Install app*) only runs over **HTTPS** 
 
 ```php
 <!-- In the <head> -->
-<link rel="stylesheet" href="/tools/colour-palette-contrast-checker/assets/css/cpc.css?v=1.0.6">
+<link rel="stylesheet" href="/tools/colour-palette-contrast-checker/assets/css/cpc.css?v=1.0.8">
 
 <!-- Where the tool should appear -->
 <?php
@@ -82,7 +82,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/tools/colour-palette-contrast-checker/part
 ?>
 
 <!-- Before </body> -->
-<script src="/tools/colour-palette-contrast-checker/assets/js/cpc.js?v=1.0.6" defer></script>
+<script src="/tools/colour-palette-contrast-checker/assets/js/cpc.js?v=1.0.8" defer></script>
 ```
 
 When embedded:

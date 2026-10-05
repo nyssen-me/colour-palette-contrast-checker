@@ -2,7 +2,7 @@
  * Service worker: makes the checker work offline and installable.
  * Bump CACHE_VERSION (and $cpc_version in index.php) whenever you change the files.
  */
-var CACHE_VERSION = '1.0.6';
+var CACHE_VERSION = '1.0.8';
 var CACHE_NAME = 'cpc-' + CACHE_VERSION;
 
 var PRECACHE = [
@@ -11,9 +11,10 @@ var PRECACHE = [
     'assets/js/cpc.js?v=' + CACHE_VERSION,
     'assets/data/colour-names.json',
     'manifest.webmanifest',
-    'icons/icon.svg',
-    'icons/icon-192.png',
-    'icons/icon-512.png'
+    'assets/icons/icon.svg',
+    'assets/icons/icon-32.png',
+    'assets/icons/icon-192.png',
+    'assets/icons/icon-512.png'
 ];
 
 self.addEventListener('install', function (event) {

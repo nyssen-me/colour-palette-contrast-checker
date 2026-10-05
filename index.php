@@ -7,7 +7,7 @@
 
 // Bump this when you change the CSS/JS so browsers (and the service worker) fetch the new files.
 // Keep it in sync with CACHE_VERSION in sw.js.
-$cpc_version    = '1.0.6';
+$cpc_version    = '1.0.8';
 $cpc_base       = '';
 $cpc_standalone = true;
 ?>
@@ -25,8 +25,9 @@ $cpc_standalone = true;
     <meta property="og:title" content="Colour Palette Contrast Checker">
     <meta property="og:description" content="Check the WCAG 2.2 contrast of every combination in your colour palette at once.">
 
-    <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="icons/icon-192.png">
+    <link rel="icon" href="assets/icons/icon-32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="assets/icons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="assets/icons/icon-192.png">
     <link rel="manifest" href="manifest.webmanifest">
     <link rel="stylesheet" href="assets/css/cpc.css?v=<?= $cpc_version ?>">
     <style>body { margin: 0; }</style>
