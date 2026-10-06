@@ -91,6 +91,24 @@
 
 .cpc--standalone .cpc-main { flex: 1; }
 
+/* Match the page (overscroll area, scrollbars) to the checker's theme */
+html:has(> body > .cpc--standalone) {
+    background: #f6f5f2;
+    color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+    html:has(> body > .cpc--standalone:not([data-theme="light"])) {
+        background: #121218;
+        color-scheme: dark;
+    }
+}
+
+html:has(> body > .cpc--standalone[data-theme="dark"]) {
+    background: #121218;
+    color-scheme: dark;
+}
+
 .cpc *,
 .cpc *::before,
 .cpc *::after { box-sizing: border-box; }
@@ -419,7 +437,7 @@
     margin-bottom: 20px;
 }
 
-.cpc-summary { #
+.cpc-summary {
     color: var(--cpc-muted);
     font-weight: 400;
     font-size: 1.25rem;

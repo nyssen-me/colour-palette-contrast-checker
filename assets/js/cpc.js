@@ -1053,10 +1053,6 @@
             root.removeAttribute('data-theme');
             storageSet('cpc-theme', null);
         }
-        if (root.classList.contains('cpc--standalone')) {
-            document.documentElement.style.colorScheme = theme === 'light' || theme === 'dark' ? theme : '';
-            document.documentElement.style.background = getComputedStyle(root).backgroundColor;
-        }
     }
 
     q('[data-cpc-theme]').addEventListener('change', function (e) {

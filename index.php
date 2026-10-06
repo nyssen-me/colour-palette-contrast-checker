@@ -5,7 +5,7 @@
 
 // Bump this when you change the CSS/JS so browsers (and the service worker) fetch the new files.
 // Keep it in sync with CACHE_VERSION in sw.js.
-$cpc_version    = '1.0.9';
+$cpc_version    = '1.0.10';
 $cpc_base       = '';
 $cpc_standalone = true;
 ?>
@@ -57,6 +57,26 @@ $cpc_standalone = true;
     <link rel="manifest" href="manifest.webmanifest">
     <link rel="stylesheet" href="assets/css/cpc.css?v=<?= $cpc_version ?>">
     <style>body { margin: 0; }</style>
+
+    <!-- Google tag (gtag.js), loaded once the page has finished loading so it doesn't slow down first paint.
+         Calls to gtag() before then are queued in dataLayer and sent when the script arrives. -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-M6CVJ5M42S');
+
+        window.addEventListener('load', function () {
+            function loadGtag() {
+                var s = document.createElement('script');
+                s.async = true;
+                s.src = 'https://www.googletagmanager.com/gtag/js?id=G-M6CVJ5M42S';
+                document.head.appendChild(s);
+            }
+            if ('requestIdleCallback' in window) requestIdleCallback(loadGtag, { timeout: 3000 });
+            else setTimeout(loadGtag, 1000);
+        });
+    </script>
 </head>
 <body>
 <?php include __DIR__ . '/partials/checker.php'; ?>
