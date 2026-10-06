@@ -172,7 +172,7 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    gap: 16px;
+    gap: 26px 16px;
     padding-block: 20px;
 }
 
@@ -186,7 +186,7 @@
     line-height: 1.2;
 }
 
-.cpc-title__logo { width: 32px; height: 32px; }
+.cpc-title__logo { flex: none; width: 32px; height: 32px; }
 .cpc-title__accent { color: var(--cpc-muted); font-weight: 600; }
 
 /* ---------- Intro ---------- */
@@ -195,11 +195,11 @@
 }
 
 .cpc-intro__lead {
-    font-size: clamp(1.75rem, 4.5vw, 3.2rem);
+    font-size: clamp(2rem, 4.5vw, 3rem);
     font-weight: 400;
     letter-spacing: -0.035em;
     line-height: 1.08;
-    max-width: 18ch;
+    max-width: 26ch;
     margin-bottom: 16px;
     text-wrap: balance;
 }
@@ -207,7 +207,13 @@
 .cpc-intro p:not(.cpc-intro__lead) {
     font-size: 1.125rem;
     color: var(--cpc-muted);
-    max-width: 60ch;
+    max-width: 68ch;
+}
+
+@media (max-width: 719px) {
+    .cpc-intro__lead { 
+        max-width: 100%;
+    }
 }
 
 /* ---------- Buttons ---------- */

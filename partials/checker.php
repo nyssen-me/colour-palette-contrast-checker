@@ -40,7 +40,7 @@ if (!function_exists('cpc_e')) {
                     <rect x="2" y="17" width="13" height="13" rx="0" fill="#9C0D38"/>
                     <rect x="17" y="17" width="13" height="13" rx="0" fill="#FFB006"/>
                 </svg>
-                <span>Colour Palette <span class="cpc-title__accent">Contrast Checker</span></span>
+                <span>Accessible Colour Palette <span class="cpc-title__accent">Contrast Checker</span></span>
             </h<?= $cpc_h1 ?>>
 
             <fieldset class="cpc-segmented cpc-segmented--small" data-cpc-theme>
@@ -54,8 +54,8 @@ if (!function_exists('cpc_e')) {
 
     <main class="cpc-main">
         <section class="cpc-container cpc-intro" aria-label="About this tool">
-            <p class="cpc-intro__lead">Check every colour in your palette against every other colour, all at once.</p>
-            <p>Add your colours and see which pairs are safe for text and interface elements under <abbr title="Web Content Accessibility Guidelines">WCAG</abbr>&nbsp;2.2. Then share the palette or copy it as CSS.</p>
+            <p class="cpc-intro__lead">Build an accessible colour palette by checking the contrast of every colour pair at once.</p>
+            <p>Add your colours and see which pairs have enough contrast for text and interface elements under <abbr title="Web Content Accessibility Guidelines">WCAG</abbr>&nbsp;2.2. Then share the palette or copy it as CSS.</p>
         </section>
 
         <section class="cpc-container cpc-panel cpc-settings" aria-labelledby="cpc-settings-title">

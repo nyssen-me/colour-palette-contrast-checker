@@ -1,7 +1,7 @@
 {
-    "name": "Colour Palette Contrast Checker",
+    "name": "Accessible Colour Palette Contrast Checker",
     "short_name": "Contrast Checker",
-    "description": "Check the WCAG 2.2 colour contrast of every combination in your colour palette at once.",
+    "description": "Build an accessible colour palette. Check the WCAG 2.2 contrast of every colour combination at once.",
     "start_url": "./",
     "scope": "./",
     "display": "standalone",

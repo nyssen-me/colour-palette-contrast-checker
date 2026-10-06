@@ -5,7 +5,7 @@
 
 // Bump this when you change the CSS/JS so browsers (and the service worker) fetch the new files.
 // Keep it in sync with CACHE_VERSION in sw.js.
-$cpc_version    = '1.0.8';
+$cpc_version    = '1.0.9';
 $cpc_base       = '';
 $cpc_standalone = true;
 ?>
@@ -14,14 +14,42 @@ $cpc_standalone = true;
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Colour Palette Contrast Checker</title>
-    <meta name="description" content="Check the WCAG 2.2 colour contrast of every combination in your colour palette at once, for normal text, large text and UI components.">
+    <title>Accessible Colour Palette Contrast Checker (WCAG 2.2)</title>
+    <meta name="description" content="Build an accessible colour palette. Check the WCAG 2.2 contrast of every colour combination at once, for normal text, large text and UI components.">
+    <link rel="canonical" href="https://accessiblepalette.uk/">
     <meta name="theme-color" content="#f6f5f2" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#121218" media="(prefers-color-scheme: dark)">
 
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Colour Palette Contrast Checker">
-    <meta property="og:description" content="Check the WCAG 2.2 contrast of every combination in your colour palette at once.">
+    <meta property="og:url" content="https://accessiblepalette.uk/">
+    <meta property="og:site_name" content="Accessible Palette">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:title" content="Accessible Colour Palette Contrast Checker">
+    <meta property="og:description" content="Build an accessible colour palette. Check the WCAG 2.2 contrast of every colour combination at once.">
+    <meta property="og:image" content="https://accessiblepalette.uk/assets/images/og-image.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Accessible Colour Palette Contrast Checker: four colour pairs with their WCAG contrast ratios and pass levels.">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Accessible Colour Palette Contrast Checker",
+        "alternateName": "Accessible Palette",
+        "url": "https://accessiblepalette.uk/",
+        "image": "https://accessiblepalette.uk/assets/images/og-image.png",
+        "description": "A free tool for building accessible colour palettes. It checks the WCAG 2.2 contrast of every colour combination in a palette at once, for normal text, large text and UI components, at level AA or AAA.",
+        "applicationCategory": "DesignApplication",
+        "operatingSystem": "Any",
+        "browserRequirements": "Requires JavaScript",
+        "inLanguage": "en-GB",
+        "isAccessibleForFree": true,
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" }
+    }
+    </script>
 
     <link rel="icon" href="assets/icons/icon-32.png" sizes="32x32" type="image/png">
     <link rel="icon" href="assets/icons/icon.svg" type="image/svg+xml">

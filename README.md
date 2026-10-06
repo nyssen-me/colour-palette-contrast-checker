@@ -1,6 +1,8 @@
-# Colour Palette Contrast Checker
+# Accessible Colour Palette Contrast Checker
 
-A small web app that checks the colour contrast of **every combination in a colour palette** at once, against WCAG 2.2.
+**Live at [accessiblepalette.uk](https://accessiblepalette.uk/)**
+
+A small web app for building accessible colour palettes. It checks the colour contrast of **every combination in a colour palette** at once, against WCAG 2.2.
 
 Most contrast checkers test one text colour against one background. This tool takes a whole palette and shows which pairs work for normal text, large text and UI components, so you can see at a glance which colours can be used together.
 
@@ -53,6 +55,9 @@ colour-palette-contrast-checker/
 ├── manifest.webmanifest         Web app manifest
 ├── sw.js                        Service worker (offline support)
 ├── assets/icons/                App icons (SVG + PNG)
+├── assets/images/og-image.png   Share image for social media (1200 × 630)
+├── robots.txt                   Crawler rules and sitemap location
+├── sitemap.xml                  Sitemap for search engines
 └── README.md
 ```
 
@@ -65,6 +70,8 @@ https://example.com/colour-palette-contrast-checker/
 ```
 
 The service worker (offline support and *Install app*) only runs over **HTTPS** or on `localhost`.
+
+`index.php`, `robots.txt` and `sitemap.xml` contain absolute URLs for `https://accessiblepalette.uk/` (canonical link, social media tags and sitemap). If you host your own copy, change them to your address, or remove them. `robots.txt` only works at the root of a domain.
 
 ## URL parameters
 

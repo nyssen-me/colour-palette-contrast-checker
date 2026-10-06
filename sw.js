@@ -2,7 +2,7 @@
  * Service worker: makes the checker work offline and installable.
  * Bump CACHE_VERSION (and $cpc_version in index.php) whenever you change the files.
  */
-var CACHE_VERSION = '1.0.8';
+var CACHE_VERSION = '1.0.9';
 var CACHE_NAME = 'cpc-' + CACHE_VERSION;
 
 var PRECACHE = [
