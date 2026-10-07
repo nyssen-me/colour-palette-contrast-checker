@@ -29,7 +29,7 @@ Built with plain HTML, PHP, CSS and JavaScript. No frameworks, no build step and
   Cards is the default view. Your choice is saved in the share link.
 - **Only show passing pairs.** Hides pairs that fail even the large-text check.
 - **Remove and reorder.** Drag the handle to reorder (works with mouse and touch, no library), or use the arrow buttons. Keyboard users can focus the handle and press the arrow keys.
-- **Share link.** The page address always holds the current palette and settings, and *Copy share link* copies it.
+- **Share link.** The page address holds the current palette and settings, and *Copy share link* copies it. The palette is added to the address once you edit or add a colour, so the first visit has a clean URL.
 - **Export CSS.** Copies the palette as CSS custom properties in HEX, RGB or HSL, named after the colours:
 
   ```css
@@ -77,9 +77,11 @@ The service worker (offline support and *Install app*) only runs over **HTTPS** 
 
 The address updates as you work, so any URL is a shareable snapshot. Other query parameters on the page are kept.
 
+The random starting colour is not added to the address. `c` (and `n`) only appear once you edit a colour, add a second one, or copy the share link, or if the page was opened with `c` already in the address. Once `c` is added, it stays. This keeps landing-page URLs clean in analytics.
+
 | Parameter | Example | Meaning |
 |---|---|---|
-| `c` | `c=f2e2ba-bad7f2-e94560` | Colours, as HEX values without `#`, separated by `-` |
+| `c` | `c=f2e2ba-bad7f2-e94560` | Colours, as HEX values without `#`, separated by `-`. Left out until the palette has been changed (see above). |
 | `n` | `n=Cream\|Brand Blue\|` | Custom names, in the same order, separated by `\|`. An empty entry means the automatic name. Only added when you have changed a name. |
 | `level` | `level=aaa` | WCAG level (leave it out for AA) |
 | `view` | `view=table` | Show the table view (leave it out for cards, the default) |

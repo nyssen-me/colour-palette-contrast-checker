@@ -5,7 +5,7 @@
 
 // Bump this when you change the CSS/JS so browsers (and the service worker) fetch the new files.
 // Keep it in sync with CACHE_VERSION in sw.js.
-$cpc_version    = '1.0.10';
+$cpc_version    = '1.0.11';
 $cpc_base       = '';
 $cpc_standalone = true;
 ?>

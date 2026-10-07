@@ -266,10 +266,17 @@
        URL (share link)
        ====================================================================== */
 
+    // The palette is only written to the URL once it's worth sharing: when the
+    // page was opened with one, or once a colour has been edited or added. This
+    // keeps the landing URL clean (e.g. for analytics) while the palette is
+    // just the random starting colour.
+    var paletteInUrl = false;
+
     function readUrl() {
         var params = new URLSearchParams(window.location.search);
         var hexes = (params.get('c') || '').split(/[-,\s]+/).map(normaliseHex).filter(Boolean);
         var names = params.has('n') ? params.get('n').split('|') : [];
+        if (hexes.length) paletteInUrl = true;
         hexes.forEach(function (hex, i) {
             state.colours.push(createColour(hex, (names[i] || '').trim().slice(0, 40) || null));
         });
@@ -280,8 +287,13 @@
 
     function writeUrl() {
         var params = new URLSearchParams(window.location.search);
-        params.set('c', state.colours.map(function (c) { return c.hex; }).join('-'));
-        if (state.colours.some(function (c) { return c.customName; })) {
+        if (state.colours.length > 1) paletteInUrl = true;
+        if (paletteInUrl) {
+            params.set('c', state.colours.map(function (c) { return c.hex; }).join('-'));
+        } else {
+            params.delete('c');
+        }
+        if (paletteInUrl && state.colours.some(function (c) { return c.customName; })) {
             params.set('n', state.colours.map(function (c) { return (c.customName || '').replace(/\|/g, ''); }).join('|'));
         } else {
             params.delete('n');
@@ -289,7 +301,8 @@
         if (state.level === 'aaa') params.set('level', 'aaa'); else params.delete('level');
         if (state.view === 'table') params.set('view', 'table'); else params.delete('view');
         if (state.hideFailing) params.set('hide', '1'); else params.delete('hide');
-        var url = window.location.pathname + '?' + params.toString() + window.location.hash;
+        var query = params.toString();
+        var url = window.location.pathname + (query ? '?' + query : '') + window.location.hash;
         try { window.history.replaceState(null, '', url); } catch (e) { /* e.g. file:// */ }
     }
 
@@ -437,6 +450,7 @@
     function setColourHex(colour, hex) {
         if (colour.hex === hex) return;
         colour.hex = hex;
+        paletteInUrl = true;
         updateTile(colour);
         renderStrip();
         scheduleResults();
@@ -1071,6 +1085,7 @@
        ====================================================================== */
 
     q('[data-cpc-share]').addEventListener('click', function () {
+        paletteInUrl = true;
         writeUrl();
         copyText(window.location.href).then(function () {
             toast('Share link copied to the clipboard');
