@@ -119,3 +119,7 @@ All current versions of Chrome, Edge, Firefox and Safari, on desktop and mobile.
 
 - Colour names: [color-name-list](https://github.com/meodai/color-names) ("best of" list) by David Aerne, MIT licence.
 - Contrast guidance: [W3C WCAG 2.2](https://www.w3.org/TR/WCAG22/).
+
+## Licence
+
+[MIT](LICENSE). You're free to use, change and share the code, as long as you keep the copyright notice.
