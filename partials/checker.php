@@ -169,7 +169,8 @@ if (!function_exists('cpc_e')) {
 
                 <div class="cpc-info__card">
                     <h<?= $cpc_h3 ?> class="cpc-h3">Don't rely on colour alone</h<?= $cpc_h3 ?>>
-                    <p>Even with good contrast, colour should never be the only way to show information. Add text, icons or patterns too (for example, underline links and add icons to error messages).</p>
+                    <p>Even with good contrast, colour should never be the only way to show information. Add text, icons or patterns too (for example, add icons to error messages).</p>
+                    <p><strong>Links in body text.</strong> The simplest fix is to underline them. If you don't, add the background, text and link colours to your palette and check three pairs: text on background (4.5:1), link on background (4.5:1), and link against text (at least <strong>3:1</strong>). Links also need an underline or other non-colour cue on hover and keyboard focus.</p>
                 </div>
 
                 <div class="cpc-info__card">
