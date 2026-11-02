@@ -114,6 +114,7 @@ All current versions of Chrome, Edge, Firefox and Safari, on desktop and mobile.
 
 - **Embedding in another page.** Let the tool be included inside an existing page of a website (not only used as a standalone page). An early attempt didn't work well, so this needs more work before it's supported.
 - **Suggest a passing shade.** When a pair fails, suggest the nearest shade that passes, for either colour, with a button to apply it. Brand colours are often fixed, so the designer should choose which colour changes. Keep the hue and only change lightness (in OKLCH), and say how many other pairs the change affects. Warn when the nearest passing shade is very different, for example a mid-tone like bright red, which only reaches 4.5:1 with colours close to white or black.
+- **Figma plugin.** Check a Figma file's colour styles or variables and show the same pass and fail grid in a plugin panel. It can be plain JavaScript and HTML (`manifest.json`, `code.js`, `ui.html`) with no build step, reusing the contrast maths from `cpc.js`. Check existing Figma contrast plugins first, to see if any already checks a whole palette.
 
 ## Credits
 
